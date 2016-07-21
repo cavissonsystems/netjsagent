@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.36",
+      "netjsagent@0.2.37",
       "/home/netstorm/Desktop/nodejs macys app/m2perf1mcom"
     ]
   ],
@@ -75,7 +75,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.36",
+  "version": "0.2.37",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.33.tgz_1466580099194_0.5942151383496821"
