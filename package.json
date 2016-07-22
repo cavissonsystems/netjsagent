@@ -1,12 +1,12 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.37",
+      "netjsagent@0.2.38",
       "/home/netstorm/Desktop/nodejs macys app/m2perf1mcom"
     ]
   ],
-  "_from": "netjsagent@>=0.2.36 <0.3.0",
-  "_id": "netjsagent@0.2.36",
+  "_from": "netjsagent@0.2.37",
+  "_id": "netjsagent@0.2.37",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -29,7 +29,7 @@
     "/"
   ],
   "_resolved": "file:node_modules/netjsagent",
-  "_shasum": "3fcf90ce9274f982b7c72acb99911705ef4dbdb5",
+  "_shasum": "c055bc98cb905bb155e2dbd75ae77c1bcef5937e",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.2.14",
   "_where": "/home/netstorm/Desktop/nodejs macys app/m2perf1mcom",
@@ -42,12 +42,14 @@
     "domain": "0.0.1",
     "extend": "^1.2.1",
     "falafel": "^0.3.1",
+    "fs": "0.0.2",
     "idgen": "^2.0",
     "int64": "0.0.5",
     "long": "^3.1.0",
     "mathjs": "^3.2.1",
     "microseconds": "~0.1.0",
     "minimatch": "^0.3. 0",
+    "mkdirp": "^0.5.1",
     "node-gyp": "2.0.1",
     "node-uuid": "~1.4.3",
     "path": "^0.12.7",
@@ -75,7 +77,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.37",
+  "version": "0.2.38",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.33.tgz_1466580099194_0.5942151383496821"
