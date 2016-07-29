@@ -26,8 +26,6 @@ NJSInstrument.prototype.instrument = function instrument(filename)
         var clusterPath = '/tmp/cavisson/cluster';
         if(!cluster.isMaster)
         {
-            console.log("code is running for worker");
-            console.log(process.pid);
             if(fs.existsSync(clusterPath)) {
                 fs.readdir(clusterPath, function (err, files) {
                     if(err)console.log(err);
