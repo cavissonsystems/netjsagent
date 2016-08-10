@@ -3,6 +3,7 @@
  */
 
 var PropertiesReader = require('properties-reader');
+var ndEventLoopMonitor = require('./lib/event_loop_moitor/ndEventLoopMonitor.js');
 var njstrace = require('./lib/njstrace/njsTrace');
 var path  = require('path');
 var agentSetting = require("./lib/agent-setting");
@@ -14,7 +15,6 @@ var util = require('./lib/util');
 var fs = require('fs');
 var cluster = require('cluster');
 var ndSettingFile = path.join(path.resolve(__dirname),'/../../ndSettings.conf');
-
 
 NJSInstrument.prototype.instrument = function instrument(filename)
 {
@@ -54,6 +54,11 @@ NJSInstrument.prototype.instrument = function instrument(filename)
         util.initializeLogger();
 
         agentSetting.getData(ndSettingFile);      //getting data for making connection to ndc
+
+        if(1 == agentSetting.enable_eventLoop_monitor) {                    //Starting the event loop manager
+            util.logger.info("Going to initialized event_loop_monitor .");
+            ndEventLoopMonitor.init();
+        }
 
         btConf.getData(path.join(path.resolve(__dirname),'/../../ndBtRuleFile.txt'));
 
