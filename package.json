@@ -1,12 +1,12 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.40",
+      "netjsagent@0.2.41",
       "/home/netstorm/Desktop/nodejs macys app/m2perf1mcom"
     ]
   ],
-  "_from": "netjsagent@>=0.2.39 <0.3.0",
-  "_id": "netjsagent@0.2.39",
+  "_from": "netjsagent@>=0.2.40 <0.3.0",
+  "_id": "netjsagent@0.2.40",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -29,7 +29,7 @@
     "/"
   ],
   "_resolved": "file:node_modules/netjsagent",
-  "_shasum": "05275dc8ab2937545c7d429f4c4b9ef81314ab2b",
+  "_shasum": "947687feeff6c6120e678ffe02b722682cf8c429",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.2.14",
   "_where": "/home/netstorm/Desktop/nodejs macys app/m2perf1mcom",
@@ -79,7 +79,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.40",
+  "version": "0.2.41",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.33.tgz_1466580099194_0.5942151383496821"
