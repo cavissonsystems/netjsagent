@@ -15,11 +15,19 @@ var util = require('./lib/util');
 var fs = require('fs');
 var cluster = require('cluster');
 var ndSettingFile = path.join(path.resolve(__dirname),'/../../ndSettings.conf');
+var memwatch = require('memwatch-next');
 
 NJSInstrument.prototype.instrument = function instrument(filename)
 {
     try
     {
+        memwatch.on('leak', function (info) {
+            util.logger.warn("Memory is leaking : ");
+            util.logger.warn(info);
+            //util.logger.warn(process.memoryUsage());
+        });
+
+
         var instance ;
         properties = PropertiesReader(ndSettingFile);
 
