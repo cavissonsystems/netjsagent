@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.44"
+      "netjsagent@0.2.45"
     ]
   ],
-  "_from": "netjsagent@>=0.2.43 <0.3.0",
-  "_id": "netjsagent@0.2.43",
+  "_from": "netjsagent@0.2.44",
+  "_id": "netjsagent@0.2.44",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -27,8 +27,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "file:node_modules/netjsagent",
-  "_shasum": "6547c65d46a235db4308dd84911a974b156062bf",
+  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.44.tgz",
+  "_shasum": "aab1bd6e56d62d5fe09a9ffe25d0d35057f36e16",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.2.14",
   "dependencies": {
@@ -62,8 +62,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "1d17c757872866b4c9ab05de8bc66704ae1243fe",
-    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.33.tgz"
+    "shasum": "aab1bd6e56d62d5fe09a9ffe25d0d35057f36e16",
+    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.44.tgz"
   },
   "gitHead": "eb7149639d9d2b9c768b3cc461c83264b6274d3f",
   "main": "netjsagent.js",
@@ -78,10 +78,9 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.44",
+  "version": "0.2.45",
   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/netjsagent-0.2.33.tgz_1466580099194_0.5942151383496821"
-  },
-  "readme": "ERROR: No README data found!"
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/netjsagent-0.2.44.tgz_1472709600227_0.4030302227474749"
+  }
 }
