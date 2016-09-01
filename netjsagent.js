@@ -4,6 +4,7 @@
 
 var PropertiesReader = require('properties-reader');
 var ndEventLoopMonitor = require('./lib/event_loop_moitor/ndEventLoopMonitor.js');
+var ndHeapGCMonitor = require('./lib/heap_gc_monitor/ndHeapGCMonitor.js');
 var njstrace = require('./lib/njstrace/njsTrace');
 var path  = require('path');
 var agentSetting = require("./lib/agent-setting");
@@ -15,6 +16,7 @@ var util = require('./lib/util');
 var fs = require('fs');
 var cluster = require('cluster');
 var ndSettingFile = path.join(path.resolve(__dirname),'/../../ndSettings.conf');
+var instrumentationFile = path.join(path.resolve(__dirname),'/../../instrumentation.conf');
 var memwatch = require('memwatch-next');
 
 NJSInstrument.prototype.instrument = function instrument(filename)
@@ -36,27 +38,28 @@ NJSInstrument.prototype.instrument = function instrument(filename)
         {
             if(fs.existsSync(clusterPath)) {
                 fs.readdir(clusterPath, function (err, files) {
-                    if(err)console.log(err);
-                    files.forEach(function (file) {
+                    try {
+                        if (err)console.log(err);
+                        files.forEach(function (file) {
 
-                        var index = file.split('.')[0];
+                            var index = file.split('.')[0];
 
-                        fs.readFile(clusterPath + '/' + file, function (err, pid)
-                        {
-                            if(err)console.log(err);
-                            if (pid == process.pid) {
-                                instance = properties.get('instance');
-                                if (instance.indexOf('_') != -1) {
-                                    instance = instance.split('_')[0];
+                            fs.readFile(clusterPath + '/' + file, function (err, pid) {
+                                if (err)console.log(err);
+                                if (pid == process.pid) {
+                                    instance = properties.get('instance');
+                                    if (instance.indexOf('_') != -1) {
+                                        instance = instance.split('_')[0];
+                                    }
+                                    instance = instance + '_' + index;
+
+                                    agentSetting.instance = instance;
                                 }
-                                instance = instance + '_' + index;
-
-                                agentSetting.instance = instance;
-                            }
+                            });
                         });
-                    });
+                    }catch(err){console.log(err)}
                 });
-            }
+                }
         }
 
         util.initializeLogger();
@@ -68,9 +71,14 @@ NJSInstrument.prototype.instrument = function instrument(filename)
             ndEventLoopMonitor.init();
         }
 
+        if(1 == agentSetting.enable_garbage_profiler) {                    //Starting the event loop manager
+            util.logger.info("Going to initialized heap_gc_monitor .");
+            ndHeapGCMonitor.init();
+        }
+
         btConf.getData(path.join(path.resolve(__dirname),'/../../ndBtRuleFile.txt'));
 
-        njstrace.inject({formatter: methodmanager});
+        njstrace.inject({formatter: methodmanager},instrumentationFile);
 
         agentSetting.getBTData(path.resolve(__dirname)+'/lib/BT/BTcategory');
 
