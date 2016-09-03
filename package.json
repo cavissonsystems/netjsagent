@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.45"
+      "netjsagent@0.2.46"
     ]
   ],
-  "_from": "netjsagent@0.2.44",
-  "_id": "netjsagent@0.2.44",
+  "_from": "netjsagent@>=0.2.45 <0.3.0",
+  "_id": "netjsagent@0.2.45",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -14,7 +14,7 @@
     "name": "cavissonsystems",
     "email": "balasudheer2802@gmail.com"
   },
-  "_npmVersion": "2.11.2",
+  "_npmVersion": "2.11.3",
   "_phantomChildren": {},
   "_requested": {
     "name": "netjsagent",
@@ -27,13 +27,13 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.44.tgz",
-  "_shasum": "aab1bd6e56d62d5fe09a9ffe25d0d35057f36e16",
+  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.45.tgz",
+  "_shasum": "97ad2c467ca89a0f31fcc97f49544ad1d51b2cf0",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.2.14",
   "dependencies": {
     "agent.io": "~0.1.3",
-    "big-integer": "~1.5.6",
+      "big-integer": "~1.5.6",
     "big-number": "~0.3.1",
     "cluster": "0.7.7",
     "continuation-local-storage": "^3.1.7",
@@ -62,8 +62,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "aab1bd6e56d62d5fe09a9ffe25d0d35057f36e16",
-    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.44.tgz"
+    "shasum": "97ad2c467ca89a0f31fcc97f49544ad1d51b2cf0",
+    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.45.tgz"
   },
   "gitHead": "eb7149639d9d2b9c768b3cc461c83264b6274d3f",
   "main": "netjsagent.js",
@@ -78,9 +78,10 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.45",
+  "version": "0.2.46",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/netjsagent-0.2.44.tgz_1472709600227_0.4030302227474749"
-  }
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/netjsagent-0.2.45.tgz_1472730819210_0.5029777698218822"
+  },
+  "description": ""
 }
