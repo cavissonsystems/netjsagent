@@ -64,6 +64,10 @@ NJSInstrument.prototype.instrument = function instrument(filename)
 
         util.initializeLogger();
 
+        agentSetting.initAllMap();
+
+        agentSetting.generateFPMask();
+
         agentSetting.getData(ndSettingFile);      //getting data for making connection to ndc
 
         if(1 == agentSetting.enable_eventLoop_monitor) {                    //Starting the event loop manager

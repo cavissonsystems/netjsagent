@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.46"
+      "netjsagent@0.2.47"
     ]
   ],
   "_from": "netjsagent@>=0.2.45 <0.3.0",
@@ -33,8 +33,6 @@
   "_spec": "netjsagent@0.2.14",
   "dependencies": {
     "agent.io": "~0.1.3",
-      "big-integer": "~1.5.6",
-    "big-number": "~0.3.1",
     "cluster": "0.7.7",
     "continuation-local-storage": "^3.1.7",
     "domain": "0.0.1",
@@ -43,11 +41,8 @@
     "falafel": "^0.3.1",
     "fs": "0.0.2",
     "idgen": "^2.0",
-    "int64": "0.0.5",
     "long": "^3.1.0",
-    "mathjs": "^3.2.1",
     "memwatch-next": "^0.3.0",
-    "microseconds": "~0.1.0",
     "minimatch": "^0.3. 0",
     "mkdirp": "^0.5.1",
     "node-gyp": "2.0.1",
@@ -78,7 +73,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.46",
+  "version": "0.2.47",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.45.tgz_1472730819210_0.5029777698218822"
