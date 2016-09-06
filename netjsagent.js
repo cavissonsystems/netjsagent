@@ -86,7 +86,14 @@ NJSInstrument.prototype.instrument = function instrument(filename)
 
         agentSetting.getBTData(path.resolve(__dirname)+'/lib/BT/BTcategory');
 
-        setTimeout(function(){clientConn.connectToServer();},1000);
+        setTimeout(function(){
+            try {
+                clientConn.connectToServer();
+            }
+            catch(e){
+                util.logger.warn(e);
+            }
+        },1000);
 
         var nt = require('./lib/nodetime/index').profile();
     }
