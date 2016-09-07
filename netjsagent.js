@@ -2,7 +2,6 @@
  * Created by bala on 10/7/15.
  */
 
-var PropertiesReader = require('properties-reader');
 var ndEventLoopMonitor = require('./lib/event_loop_moitor/ndEventLoopMonitor.js');
 var ndHeapGCMonitor = require('./lib/heap_gc_monitor/ndHeapGCMonitor.js');
 var njstrace = require('./lib/njstrace/njsTrace');
@@ -14,7 +13,6 @@ var btConf = require('./lib/BT/btconfiguration');
 var path = require('path');
 var util = require('./lib/util');
 var fs = require('fs');
-var cluster = require('cluster');
 var ndSettingFile = path.join(path.resolve(__dirname),'/../../ndSettings.conf');
 var instrumentationFile = path.join(path.resolve(__dirname),'/../../instrumentation.conf');
 var memwatch = require('memwatch-next');
@@ -26,41 +24,10 @@ NJSInstrument.prototype.instrument = function instrument(filename)
         memwatch.on('leak', function (info) {
             util.logger.warn("Memory is leaking : ");
             util.logger.warn(info);
-            //util.logger.warn(process.memoryUsage());
+            util.logger.warn(process.memoryUsage());
         });
 
-
-        var instance ;
-        properties = PropertiesReader(ndSettingFile);
-
-        var clusterPath = '/tmp/cavisson/cluster';
-        if(!cluster.isMaster)
-        {
-            if(fs.existsSync(clusterPath)) {
-                fs.readdir(clusterPath, function (err, files) {
-                    try {
-                        if (err)console.log(err);
-                        files.forEach(function (file) {
-
-                            var index = file.split('.')[0];
-
-                            fs.readFile(clusterPath + '/' + file, function (err, pid) {
-                                if (err)console.log(err);
-                                if (pid == process.pid) {
-                                    instance = properties.get('instance');
-                                    if (instance.indexOf('_') != -1) {
-                                        instance = instance.split('_')[0];
-                                    }
-                                    instance = instance + '_' + index;
-
-                                    agentSetting.instance = instance;
-                                }
-                            });
-                        });
-                    }catch(err){console.log(err)}
-                });
-                }
-        }
+        agentSetting.isCluster();
 
         util.initializeLogger();
 
@@ -86,7 +53,7 @@ NJSInstrument.prototype.instrument = function instrument(filename)
 
         agentSetting.getBTData(path.resolve(__dirname)+'/lib/BT/BTcategory');
 
-        setTimeout(function(){
+        process.nextTick(function(){
             try {
                 clientConn.connectToServer();
             }
