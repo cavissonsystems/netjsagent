@@ -22,8 +22,8 @@ NJSInstrument.prototype.instrument = function instrument(filename)
     try
     {
         memwatch.on('leak', function (info) {
-            util.logger.warn("Memory is leaking : ");
-            util.logger.warn(info);
+            util.logger.warn(agentSetting.currentTestRun+ " | Memory is leaking : ");
+            util.logger.warn(agentSetting.currentTestRun+ " | "+info);
             util.logger.warn(process.memoryUsage());
         });
 
@@ -37,21 +37,11 @@ NJSInstrument.prototype.instrument = function instrument(filename)
 
         agentSetting.getData(ndSettingFile);      //getting data for making connection to ndc
 
-        if(1 == agentSetting.enable_eventLoop_monitor) {                    //Starting the event loop manager
-            util.logger.info("Going to initialized event_loop_monitor .");
-            ndEventLoopMonitor.init();
-        }
-
-        if(1 == agentSetting.enable_garbage_profiler) {                    //Starting the event loop manager
-            util.logger.info("Going to initialized heap_gc_monitor .");
-            ndHeapGCMonitor.init();
-        }
-
         btConf.getData(path.join(path.resolve(__dirname),'/../../ndBtRuleFile.txt'));
 
         njstrace.inject({formatter: methodmanager},instrumentationFile);
 
-        agentSetting.getBTData(path.resolve(__dirname)+'/lib/BT/BTcategory');
+        agentSetting.getBTData(path.resolve(__dirname)+'/../../BTcategory');
 
         process.nextTick(function(){
             try {
