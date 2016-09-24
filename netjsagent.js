@@ -12,7 +12,6 @@ var ndBTMetaData = require('./lib/metaData/ndBTMetaData');
 var path = require('path');
 var util = require('./lib/util');
 var fs = require('fs');
-var ndSettingFile = path.join(path.resolve(__dirname),'/../../ndSettings.conf');
 var instrumentationFile = path.join(path.resolve(__dirname),'/../../instrumentation.conf');
 var memwatch = require('memwatch-next');
 
@@ -34,7 +33,7 @@ NJSInstrument.prototype.instrument = function instrument(filename)
 
         agentSetting.generateFPMask();
 
-        agentSetting.getData(ndSettingFile);      //getting data for making connection to ndc
+        agentSetting.readSettingFile();      //getting data for making connection to ndc
 
         ndBTMetaData.getData(path.join(path.resolve(__dirname),'/../../ndBtRuleFile.txt'));
 
