@@ -4,10 +4,10 @@
 
 var ndEventLoopMonitor = require('./lib/event_loop_moitor/ndEventLoopMonitor.js');
 var ndHeapGCMonitor = require('./lib/heap_gc_monitor/ndHeapGCMonitor.js');
+var methodmanager = require('./lib/methodManager');
 var njstrace = require('./lib/njstrace/njsTrace');
 var agentSetting = require("./lib/agent-setting");
 var clientConn = require("./lib/client");
-var methodmanager = require('./lib/methodManager');
 var ndBTMetaData = require('./lib/metaData/ndBTMetaData');
 var path = require('path');
 var util = require('./lib/util');
@@ -35,11 +35,12 @@ NJSInstrument.prototype.instrument = function instrument(filename)
 
         agentSetting.readSettingFile();      //getting data for making connection to ndc
 
-        ndBTMetaData.getData(path.join(path.resolve(__dirname),'/../../ndBtRuleFile.txt'));
+        //ndBTMetaData.getData(path.join(path.resolve(__dirname),'/../../ndBtRuleFile.txt'));
 
-        njstrace.inject({formatter: methodmanager},instrumentationFile);
+        //njstrace.inject({formatter: methodmanager});
+        njstrace.inject(null,instrumentationFile);
 
-        agentSetting.getBTData(path.resolve(__dirname)+'/../../BTcategory');
+        //agentSetting.getBTData(path.resolve(__dirname)+'/../../BTcategory');
 
         process.nextTick(function(){
             try {
