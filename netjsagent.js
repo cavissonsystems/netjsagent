@@ -4,7 +4,7 @@
 
 var ndEventLoopMonitor = require('./lib/event_loop_moitor/ndEventLoopMonitor.js');
 var ndHeapGCMonitor = require('./lib/heap_gc_monitor/ndHeapGCMonitor.js');
-var methodmanager = require('./lib/methodManager');
+//var methodmanager = require('./lib/methodManager');
 var njstrace = require('./lib/njstrace/njsTrace');
 var agentSetting = require("./lib/agent-setting");
 var clientConn = require("./lib/client");
