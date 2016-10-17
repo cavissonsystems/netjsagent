@@ -40,8 +40,6 @@ NJSInstrument.prototype.instrument = function instrument(filename)
         //njstrace.inject({formatter: methodmanager});
         njstrace.inject(null,instrumentationFile);
 
-        //agentSetting.getBTData(path.resolve(__dirname)+'/../../BTcategory');
-
         process.nextTick(function(){
             try {
                 clientConn.connectToServer();
