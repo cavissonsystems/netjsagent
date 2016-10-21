@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.59"
+      "netjsagent@0.2.60"
     ]
   ],
   "_from": "netjsagent@>=0.2.58 <0.3.0",
@@ -74,7 +74,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.59",
+  "version": "0.2.60",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.45.tgz_1472730819210_0.5029777698218822"
