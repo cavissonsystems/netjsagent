@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.64"
+      "netjsagent@0.2.65"
     ]
   ],
-  "_from": "netjsagent@>=0.2.56 <0.3.0",
-  "_id": "netjsagent@0.2.63",
+  "_from": "netjsagent@>=0.2.64 <0.3.0",
+  "_id": "netjsagent@0.2.64",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -27,8 +27,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.63.tgz",
-  "_shasum": "9873d530c339c56e0a293f32091512b7e3742f37",
+  "_resolved": "file:node_modules/netjsagent",
+  "_shasum": "cd326948b281686d2131c5c1cbd36ff44ae4ec6b",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.2.14",
   "dependencies": {
@@ -73,10 +73,12 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.64",
+  "version": "0.2.65",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.63.tgz_1477055863844_0.3080917662009597"
   },
-  "description": ""
+  "description": "",
+  "readme": "# netjsagent\n# netjsagent\n",
+  "readmeFilename": "README.md"
 }
