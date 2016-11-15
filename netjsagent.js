@@ -13,11 +13,14 @@ var instPrfParseobj = require('./lib/instrProfileParser');
 var fs = require('fs');
 var instrumentationFile = path.join(path.resolve(__dirname),'/../../nodeInstr.json');
 //var instrumentationFile = path.join(path.resolve(__dirname),'/../../instrumentation.conf');
-NJSInstrument.prototype.instrument = function instrument(filename)
+NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
     {
-        util.initializeLogger();
+        if(!args)
+            args = {logLevel : 'debug'}
+
+        util.initializeLogger(args.logLevel);
 
         agentSetting.initAllMap();
 
