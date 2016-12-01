@@ -45,7 +45,8 @@ NJSInstrument.prototype.instrument = function instrument(args)
             data = fs.readFileSync(instrumentationFile)
         }
 
-        instPrfParseobj.parseInstrProfile(data)
+        if(data)
+            instPrfParseobj.parseInstrProfile(data)
 
         njstrace.inject(null,instPrfParseobj.getInstrMap());
 
