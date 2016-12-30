@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.76"
+      "netjsagent@0.2.77"
     ]
   ],
-  "_from": "netjsagent@0.2.76",
-  "_id": "netjsagent@0.2.76",
+  "_from": "netjsagent@0.2.77",
+  "_id": "netjsagent@0.2.77",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -75,7 +75,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.76",
+  "version": "0.2.77",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.63.tgz_1477055863844_0.3080917662009597"
