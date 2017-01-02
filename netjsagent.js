@@ -34,6 +34,7 @@ NJSInstrument.prototype.instrument = function instrument(args)
          */
         //if('SHARED' === agentSetting.settingFileMode.toUpperCase() )
 
+        if(agentSetting.instance)
             agentSetting.isCluster();
 
         //njstrace.inject(null,instrumentationFile);
