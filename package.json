@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.90"
+      "netjsagent@0.2.91"
     ]
   ],
   "_from": "netjsagent@>=0.2.88 <0.3.0",
-  "_id": "netjsagent@0.2.90",
+  "_id": "netjsagent@0.2.91",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -28,7 +28,7 @@
     "/"
   ],
   "_resolved": "file:node_modules/netjsagent",
-  "_shasum": "199fc2617d98ad4d4ecd3d7d5225051bf6eb8763",
+  "_shasum": "c4d5ad3197178f650296a64baa4a4987fdbeeb44",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.2.14",
   "dependencies": {
@@ -74,7 +74,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.90",
+  "version": "0.2.91",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.63.tgz_1477055863844_0.3080917662009597"
