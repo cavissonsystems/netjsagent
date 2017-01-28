@@ -74,7 +74,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.922",
+  "version": "0.2.92",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.63.tgz_1477055863844_0.3080917662009597"
