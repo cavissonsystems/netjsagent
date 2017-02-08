@@ -32,13 +32,10 @@ NJSInstrument.prototype.instrument = function instrument(args)
          This check will work only in those case, if auto scaling is not working in instance is sunning in cluster
          mode, then we will provide "EXCLUSIVE" mode in ndsetting.conf .
          */
-        //if('SHARED' === agentSetting.settingFileMode.toUpperCase() )
-
-        if(agentSetting.instance)
-            agentSetting.isCluster();
+        /*if(agentSetting.instance)                         //This code is commenting because now we have autoscaling feature .
+            agentSetting.isCluster();*/
 
         //njstrace.inject(null,instrumentationFile);
-
         //njstrace.inject(null,agentSetting.instrumentationMap);
         //agentSetting.parseInstrProfile(data)
         var data ;
