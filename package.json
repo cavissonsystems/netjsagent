@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "netjsagent@0.2.97"
+      "netjsagent@0.2.98"
     ]
   ],
   "_from": "netjsagent@>=0.2.93 <0.3.0",
-  "_id": "netjsagent@0.2.97",
+  "_id": "netjsagent@0.2.98",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -34,8 +34,8 @@
   "dependencies": {
     "agent.io": "~0.1.3",
     "async-listener": "^0.6.0",
-    "cavisson-event-loop-stats": "^1.0.4",
-    "cavisson-gc-profiler": "^1.0.1",
+    "cavisson-event-loop-stats": "^1.0.5",
+    "cavisson-gc-profiler": "^1.0.2",
     "cluster": "0.7.7",
     "domain": "0.0.1",
     "emitter-listener": "^1.0.1",
@@ -75,7 +75,7 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.2.97",
+  "version": "0.2.98",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
     "tmp": "tmp/netjsagent-0.2.63.tgz_1477055863844_0.3080917662009597"
