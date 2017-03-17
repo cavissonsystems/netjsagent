@@ -11,6 +11,7 @@ var path = require('path');
 var util = require('./lib/util');
 var instPrfParseobj = require('./lib/instrProfileParser');
 var fs = require('fs');
+var cluster = require('cluster');
 var instrumentationFile = path.join(path.resolve(__dirname),'/../../nodeInstr.json');
 //var instrumentationFile = path.join(path.resolve(__dirname),'/../../instrumentation.conf');
 NJSInstrument.prototype.instrument = function instrument(args)
@@ -55,6 +56,10 @@ NJSInstrument.prototype.instrument = function instrument(args)
 
         process.nextTick(function(){
             try {
+                if(agentSetting.clusterMode) {
+                    if (cluster.isMaster)
+                        return;
+                }
                 clientConn.connectToServer();
             }
             catch(e){
