@@ -18,10 +18,10 @@ NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
     {
-        if(!args)
-            args = {logLevel : 'debug'}
+        if(!args.logLevel && !args.consoleLogging)
+            args = {logLevel : 'debug',consoleLogging : 'false'}
 
-        util.initializeLogger(args.logLevel);
+        util.initializeLogger(args.logLevel,args.consoleLogging);
 
         agentSetting.initAllMap();
 
