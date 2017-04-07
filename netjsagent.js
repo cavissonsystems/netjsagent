@@ -18,10 +18,15 @@ NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
     {
-        if(!args.logLevel && !args.consoleLogging)
-            args = {logLevel : 'debug',consoleLogging : 'false'}
+        if(!args.logLevel && !args.BCILoggingMode)
+            args = {logLevel : 'debug',BCILoggingMode : 'false'}
 
-        util.initializeLogger(args.logLevel,args.consoleLogging);
+        if(cluster.isMaster)
+            util.initializeLogger(args.logLevel,args.BCILoggingMode)
+        else
+            util.initializeLogger(args.logLevel,args.BCILoggingMode);
+
+
 
         agentSetting.initAllMap();
 
