@@ -28,7 +28,7 @@ NJSInstrument.prototype.instrument = function instrument(args)
 
 
 
-        agentSetting.initAllMap();
+        agentSetting.initAllMap(args.BCILoggingMode);
 
         agentSetting.readSettingFile();             //reading ndsetting file to connect with NS
 
