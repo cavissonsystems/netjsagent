@@ -18,8 +18,15 @@ NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
     {
-        if(!args.logLevel && !args.BCILoggingMode)
-            args = {logLevel : 'debug',BCILoggingMode : 'false'}
+        if(args){
+            if(!args.logLevel)
+                args.logLevel = 'debug';
+            if(!args.BCILoggingMode)
+                args.BCILoggingMode = 'FILE'
+        }
+        else{
+            args = {logLevel : 'debug',BCILoggingMode:'FILE'}
+        }
 
         if(cluster.isMaster)
             util.initializeLogger(args.logLevel,args.BCILoggingMode)
@@ -28,7 +35,7 @@ NJSInstrument.prototype.instrument = function instrument(args)
 
 
 
-        agentSetting.initAllMap(args.BCILoggingMode);
+        agentSetting.initAllMap(args);
 
         agentSetting.readSettingFile();             //reading ndsetting file to connect with NS
 
