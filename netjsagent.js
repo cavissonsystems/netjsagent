@@ -2,14 +2,11 @@
  * Created by bala on 10/7/15.
  */
 
-var ndEventLoopMonitor = require('./lib/event_loop_moitor/ndEventLoopMonitor.js');
-var ndHeapGCMonitor = require('./lib/heap_gc_monitor/ndHeapGCMonitor.js');
 var njstrace = require('./lib/njstrace/njsTrace');
 var agentSetting = require("./lib/agent-setting");
 var clientConn = require("./lib/client");
 var path = require('path');
 var util = require('./lib/util');
-var instPrfParseobj = require('./lib/instrProfileParser');
 var fs = require('fs');
 var cluster = require('cluster');
 var instrumentationFile = path.join(path.resolve(__dirname),'/../../nodeInstr.json');
@@ -54,11 +51,13 @@ NJSInstrument.prototype.instrument = function instrument(args)
         var data ;
         if(fs.existsSync(instrumentationFile)) {
             util.logger.info(agentSetting.currentTestRun+" | Instrumentation file exists : "+instrumentationFile)
-            data = fs.readFileSync(instrumentationFile)
+            try{
+                data = fs.readFileSync(instrumentationFile)
+            }catch(e){util.logger.error("Cant find instrumentation profile, so instrumenting all .js files.")}
         }
-
+        var instPrfParseobj = require('./lib/utils/instrumentationProfleParser');
         if(data)
-            instPrfParseobj.parseInstrProfile(data)
+            instPrfParseobj.parseInstrFile(data)
 
         njstrace.inject(null,instPrfParseobj.getInstrMap());
 

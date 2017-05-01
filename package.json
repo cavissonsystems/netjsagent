@@ -1,65 +1,80 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.5"
+      "netjsagent@0.3.7"
+    ],
+    [
+      {
+        "raw": "netjsagent@0.3.6",
+        "scope": null,
+        "escapedName": "netjsagent",
+        "name": "netjsagent",
+        "rawSpec": "0.3.6",
+        "spec": "0.3.6",
+        "type": "version"
+      },
+      "/home/netstorm/work/workspace/nsecom-master/node_modules"
     ]
   ],
-  "_from": "netjsagent@0.3.5",
-  "_id": "netjsagent@0.3.5",
+  "_from": "netjsagent@0.3.6",
+  "_id": "netjsagent@0.3.6",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
-  "_nodeVersion": "0.12.6",
+  "_nodeVersion": "4.6.1",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/netjsagent-0.3.6.tgz_1492698094031_0.7454845842439681"
+  },
   "_npmUser": {
     "name": "cavissonsystems",
     "email": "balasudheer2802@gmail.com"
   },
-  "_npmVersion": "2.11.3",
+  "_npmVersion": "2.15.9",
   "_phantomChildren": {},
   "_requested": {
-    "name": "netjsagent",
-    "raw": "netjsagent@0.2.14",
-    "rawSpec": "0.2.14",
+    "raw": "netjsagent@0.3.6",
     "scope": null,
-    "spec": "0.2.14",
+    "escapedName": "netjsagent",
+    "name": "netjsagent",
+    "rawSpec": "0.3.6",
+    "spec": "0.3.6",
     "type": "version"
   },
   "_requiredBy": [
-    "/"
+    "#USER"
   ],
-  "_resolved": "file:node_modules/netjsagent",
-  "_shasum": "b2d5ea46b90cb51f802c1e0b5ce78a1b33eae80a",
+  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.6.tgz",
+  "_shasum": "c56c7c0a135cd91f203421f99d543b3871cccd41",
   "_shrinkwrap": null,
-  "_spec": "netjsagent@0.2.14",
+  "_spec": "netjsagent@0.3.6",
+  "_where": "/home/netstorm/work/workspace/nsecom-master/node_modules",
   "dependencies": {
-    "agent.io": "~0.1.3",
     "async-listener": "^0.6.0",
     "cavisson-event-loop-stats": "^1.0.6",
     "cavisson-gc-profiler": "^1.0.3",
     "cluster": "0.7.7",
-    "domain": "0.0.1",
     "emitter-listener": "^1.0.1",
     "event-loop-monitor": "^0.2.0",
     "extend": "^1.2.1",
     "falafel": "^0.3.1",
     "fs": "0.0.2",
     "idgen": "^2.0",
-    "memcached": "^2.2.0",
     "minimatch": "^0.3. 0",
     "mkdirp": "^0.5.1",
     "node-gyp": "2.0.1",
-    "node-uuid": "~1.4.3",
     "path": "^0.12.7",
     "properties-reader": "~0.0.1",
     "url": "^0.11.0",
     "v8-profiler": "5.6.5",
     "winston": "2.2.0"
   },
+  "description": "Profiling tool for javascript",
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "9873d530c339c56e0a293f32091512b7e3742f37",
-    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.2.63.tgz"
+    "shasum": "c56c7c0a135cd91f203421f99d543b3871cccd41",
+    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.6.tgz"
   },
   "gitHead": "eb7149639d9d2b9c768b3cc461c83264b6274d3f",
   "main": "netjsagent.js",
@@ -70,16 +85,11 @@
     }
   ],
   "name": "netjsagent",
+  "optionalDependencies": {},
   "private": false,
+  "readme": "ERROR: No README data found!",
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.3.5",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/netjsagent-0.2.63.tgz_1477055863844_0.3080917662009597"
-  },
-  "description": "Profiling tool for javascript",
-  "readme": "# netjsagent\n# netjsagent\n",
-  "readmeFilename": "README.md"
+  "version": "0.3.7"
 }
