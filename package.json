@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.8"
+      "netjsagent@0.3.9"
     ]
   ],
-  "_from": "netjsagent@0.3.8",
-  "_id": "netjsagent@0.3.8",
+  "_from": "netjsagent@0.3.9",
+  "_id": "netjsagent@0.3.9",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
@@ -79,5 +79,5 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.3.8"
+  "version": "0.3.9"
 }
