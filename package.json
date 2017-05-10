@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.10"
+      "netjsagent@0.3.11"
     ]
   ],
   "_from": "netjsagent@0.3.10",
@@ -32,8 +32,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.7.tgz",
-  "_shasum": "4df865b85f680d875dc1f9a04e5aa3a9e5809b27",
+  "_resolved": "file:netjsagent",
+  "_shasum": "1b6f9870bc273eefe28db6e5f48fa0e1ad868d3b",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.3.7",
   "_where": "/home/netstorm/work/workspace/nsecom-master",
@@ -79,5 +79,5 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.3.10"
+  "version": "0.3.11"
 }
