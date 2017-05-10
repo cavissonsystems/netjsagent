@@ -7,10 +7,8 @@ var agentSetting = require("./lib/agent-setting");
 var clientConn = require("./lib/client");
 var path = require('path');
 var util = require('./lib/util');
-var fs = require('fs');
-var cluster = require('cluster');
-var instrumentationFile = path.join(path.resolve(__dirname),'/../../nodeInstr.json');
-//var instrumentationFile = path.join(path.resolve(__dirname),'/../../instrumentation.conf');
+var cluster = require('cluster'),
+    instrumentationFile;
 NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
@@ -30,10 +28,7 @@ NJSInstrument.prototype.instrument = function instrument(args)
         else
             util.initializeLogger(args.logLevel,args.BCILoggingMode);
 
-
-
         agentSetting.initAllMap(args);
-
         agentSetting.readSettingFile();             //reading ndsetting file to connect with NS
 
         /*
@@ -48,18 +43,15 @@ NJSInstrument.prototype.instrument = function instrument(args)
         //njstrace.inject(null,instrumentationFile);
         //njstrace.inject(null,agentSetting.instrumentationMap);
         //agentSetting.parseInstrProfile(data)
-        var data ;
-        if(fs.existsSync(instrumentationFile)) {
-            util.logger.info(agentSetting.currentTestRun+" | Instrumentation file exists : "+instrumentationFile)
-            try{
-                data = fs.readFileSync(instrumentationFile)
-            }catch(e){util.logger.error("Cant find instrumentation profile, so instrumenting all .js files.")}
-        }
-        var instPrfParseobj = require('./lib/utils/instrumentationProfleParser');
-        if(data)
-            instPrfParseobj.parseInstrFile(data)
+        try {
+            instrumentationFile = require('./../../nodeInstr.json');            //Getting Instrumentation profile from server side
+        }catch(err){util.logger.warn("No instrumentation profile present ")}
 
-        njstrace.inject(null,instPrfParseobj.getInstrMap());
+        var instPrfParseobj = require('./lib/utils/instrumentationProfleParser');
+        if(instrumentationFile)
+            instPrfParseobj.parseInstrFile(instrumentationFile)                 //parsing Instrumentation profile
+
+        njstrace.inject(null,instPrfParseobj.getInstrMap());                    //injecting our code into applications code
 
         agentSetting.generateFPMask();
 
