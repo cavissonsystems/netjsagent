@@ -1,5 +1,5 @@
 [{
-  "fileName" : "**/node_modules/request-promise/node_modules/stealthy-require/lib/index.js",
+  "fileName" : "**/node_modules/stealthy-require/lib/index.js",
   "methodName" : "clearCache",
   "code" : "forEach(requireCache, function (resolvedPath) {if (!isNative.test(resolvedPath) && resolvedPath.indexOf('netjsagent') == -1) {delete requireCache[resolvedPath];}});"
 }]
