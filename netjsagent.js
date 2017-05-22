@@ -8,7 +8,7 @@ var clientConn = require("./lib/client");
 var path = require('path');
 var util = require('./lib/util');
 var cluster = require('cluster'),
-    instrumentationFile;
+    instrumentationFile,customInstrumenattionProfile;
 NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
@@ -50,6 +50,12 @@ NJSInstrument.prototype.instrument = function instrument(args)
         var instPrfParseobj = require('./lib/utils/instrumentationProfleParser');
         if(instrumentationFile)
             instPrfParseobj.parseInstrFile(instrumentationFile)                 //parsing Instrumentation profile
+        else{
+            try {
+                customInstrumenattionProfile = require('./lib/utils/customNodeInstr.json');            //Getting Instrumentation profile from server side
+            }catch(err){util.logger.warn("No instrumentation profile present ")}
+            instPrfParseobj.parseInstrFile(customInstrumenattionProfile)
+        }
 
         njstrace.inject(null,instPrfParseobj.getInstrMap());                    //injecting our code into applications code
 

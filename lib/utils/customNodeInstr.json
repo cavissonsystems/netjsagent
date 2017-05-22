@@ -1,0 +1,1 @@
+[{"modulename":"**/*.js", "instrument":true},{"modulename":"http","instrument":true},{"modulename":"**/node_modules/hapi/**","instrument":false},{"modulename":"**/node_modules/cnc/**","instrument":true},{"modulename":"**/node_modules/kui/**","instrument":true},{"modulename":"**/node_modules/snb/**","instrument":true}]
