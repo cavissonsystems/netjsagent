@@ -75,7 +75,7 @@
   "name": "netjsagent",
   "optionalDependencies": {},
   "private": false,
-  "scripts": {G
+  "scripts": {
     "start": "node ./dummy"
   },
   "version": "0.3.19"
