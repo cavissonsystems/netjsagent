@@ -1,18 +1,18 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.19"
+      "netjsagent@0.3.20"
     ]
   ],
-  "_from": "netjsagent@>=0.3.12 <0.4.0",
-  "_id": "netjsagent@0.3.14",
+  "_from": "netjsagent@0.3.19",
+  "_id": "netjsagent@0.3.19",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
   "_nodeVersion": "6.10.0",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/netjsagent-0.3.14.tgz_1495201853378_0.4685721129644662"
+    "tmp": "tmp/netjsagent-0.3.19.tgz_1495456389090_0.46366773871704936"
   },
   "_npmUser": {
     "name": "cavissonsystems",
@@ -32,8 +32,8 @@
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.14.tgz",
-  "_shasum": "61c265d2ebf29517f1ba9a2cc16d1f87a130d782",
+  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.19.tgz",
+  "_shasum": "c372f8f5876631c5ab389c3eca38e1bc9352552b",
   "_shrinkwrap": null,
   "_spec": "netjsagent@0.3.7",
   "_where": "/home/netstorm/work/workspace/nsecom-master",
@@ -61,8 +61,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "61c265d2ebf29517f1ba9a2cc16d1f87a130d782",
-    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.14.tgz"
+    "shasum": "c372f8f5876631c5ab389c3eca38e1bc9352552b",
+    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.19.tgz"
   },
   "gitHead": "eb7149639d9d2b9c768b3cc461c83264b6274d3f",
   "main": "netjsagent.js",
@@ -78,5 +78,6 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.3.19"
+  "version": "0.3.20",
+  "readme": "ERROR: No README data found!"
 }

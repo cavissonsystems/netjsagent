@@ -1,7 +1,6 @@
 /**
  * Created by bala on 10/7/15.
  */
-
 var njstrace = require('./lib/njstrace/njsTrace');
 var agentSetting = require("./lib/agent-setting");
 var clientConn = require("./lib/client");
@@ -25,8 +24,11 @@ NJSInstrument.prototype.instrument = function instrument(args)
 
         if(cluster.isMaster)
             util.initializeLogger(args.logLevel,args.BCILoggingMode)
-        else
-            util.initializeLogger(args.logLevel,args.BCILoggingMode);
+        else {
+            agentSetting.clusterMode =true;
+            agentSetting.settingFileMode = 'SHARED'                     //Changing file mode to shared, so need to write Tier Server Instance name send by ndc in ndsettings.conf file.
+            util.initializeLogger(args.logLevel, args.BCILoggingMode);
+        }
 
         agentSetting.initAllMap(args);
         agentSetting.readSettingFile();             //reading ndsetting file to connect with NS
