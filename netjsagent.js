@@ -59,7 +59,7 @@ NJSInstrument.prototype.instrument = function instrument(args)
             instPrfParseobj.parseInstrFile(customInstrumenattionProfile)
         }
 
-        njstrace.inject(null,instPrfParseobj.getInstrMap());                    //injecting our code into applications code
+        njstrace.inject(null,instPrfParseobj.getInstrMap(),agentSetting.enableWraping);                    //injecting our code into applications code
 
         agentSetting.generateFPMask();
 
