@@ -77,7 +77,7 @@
   "private": false,
   "scripts": {
     "start": "node ./dummy",
-    "install":"node compareAndInstallInstrLib.js"
+    "install":"node checkDependency.js"
   },
   "version": "0.3.21",
   "readme": "ERROR: No README data found!"
