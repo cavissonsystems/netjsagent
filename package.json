@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.20"
+      "netjsagent@0.3.21"
     ]
   ],
   "_from": "netjsagent@0.3.19",
@@ -45,7 +45,7 @@
     "emitter-listener": "^1.0.1",
     "event-loop-monitor": "^0.2.0",
     "extend": "^1.2.1",
-    "falafel": "^0.3.1",
+    "falafel": "^2.1.0",
     "fs": "0.0.2",
     "idgen": "^2.0",
     "minimatch": "^0.3. 0",
@@ -76,8 +76,9 @@
   "optionalDependencies": {},
   "private": false,
   "scripts": {
-    "start": "node ./dummy"
+    "start": "node ./dummy",
+    "install":"node compareAndInstallInstrLib.js"
   },
-  "version": "0.3.20",
+  "version": "0.3.21",
   "readme": "ERROR: No README data found!"
 }
