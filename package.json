@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.21"
+      "netjsagent@0.3.22"
     ]
   ],
   "_from": "netjsagent@0.3.19",
@@ -79,6 +79,6 @@
     "start": "node ./dummy",
     "install":"node checkDependency.js"
   },
-  "version": "0.3.21",
+  "version": "0.3.22",
   "readme": "ERROR: No README data found!"
 }
