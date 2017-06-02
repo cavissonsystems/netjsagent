@@ -2,6 +2,7 @@
 * Created by sahil on 30/5/2017.
 * This file will check version of nodeJs , and on basis of this version, falafel version will be decided
 * */
+try{
 var npm = require('npm');
 var util = require('./lib/utils/compare-verssions.js')
 var nodeVersion = process.version
@@ -18,3 +19,4 @@ else if( version == -1)
     // log installation progress
   });
 });
+}catch(err){console.log("Cant find module npm ")}
