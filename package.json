@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.25"
+      "netjsagent@0.3.26"
     ]
   ],
   "_from": "netjsagent@0.3.24",
@@ -9,7 +9,7 @@
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
-  "_nodeVersion": "6.9.2",
+  "_nodeVersion": "4.6.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
     "tmp": "tmp/netjsagent-0.3.24.tgz_1496933231153_0.38899224111810327"
@@ -18,7 +18,7 @@
     "name": "cavissonsystems",
     "email": "balasudheer2802@gmail.com"
   },
-  "_npmVersion": "3.10.9",
+  "_npmVersion": "2.15.9",
   "_phantomChildren": {},
   "_requested": {
     "raw": "netjsagent@0.3.24",
@@ -79,5 +79,5 @@
     "install": "node checkDependency.js",
     "start": "node ./dummy"
   },
-  "version": "0.3.25"
+  "version": "0.3.26"
 }
