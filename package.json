@@ -1,18 +1,18 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.26"
+      "netjsagent@0.3.27"
     ]
   ],
-  "_from": "netjsagent@0.3.24",
-  "_id": "netjsagent@0.3.24",
+  "_from": "netjsagent@0.3.23",
+  "_id": "netjsagent@0.3.23",
   "_inCache": true,
   "_installable": true,
   "_location": "/netjsagent",
   "_nodeVersion": "4.6.1",
   "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/netjsagent-0.3.24.tgz_1496933231153_0.38899224111810327"
+    "tmp": "tmp/netjsagent-0.3.23.tgz_1496413484217_0.3971118307672441"
   },
   "_npmUser": {
     "name": "cavissonsystems",
@@ -21,25 +21,26 @@
   "_npmVersion": "2.15.9",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "netjsagent@0.3.24",
+    "raw": "netjsagent@0.3.7",
     "scope": null,
     "escapedName": "netjsagent",
     "name": "netjsagent",
-    "rawSpec": "0.3.24",
-    "spec": "0.3.24",
+    "rawSpec": "0.3.7",
+    "spec": "0.3.7",
     "type": "version"
   },
   "_requiredBy": [
-    "#USER"
+    "/"
   ],
-  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.24.tgz",
-  "_shasum": "e143a9f22705ce4c1c85d945cde6fade18d5129a",
+  "_resolved": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.23.tgz",
+  "_shasum": "6ec6469f1c188f79ba723b316e571b38a7bd6572",
   "_shrinkwrap": null,
-  "_spec": "netjsagent@0.3.24",
+  "_spec": "netjsagent@0.3.7",
+  "_where": "/home/netstorm/work/workspace/nsecom-master",
   "dependencies": {
     "async-listener": "^0.6.0",
-    "cavisson-event-loop-stats": "^1.0.6",
-    "cavisson-gc-profiler": "^1.0.3",
+    "cavisson-event-loop-stats": "^1.0.7",
+    "cavisson-gc-profiler": "^1.0.4",
     "cluster": "0.7.7",
     "emitter-listener": "^1.0.1",
     "event-loop-monitor": "^0.2.0",
@@ -60,8 +61,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "e143a9f22705ce4c1c85d945cde6fade18d5129a",
-    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.24.tgz"
+    "shasum": "6ec6469f1c188f79ba723b316e571b38a7bd6572",
+    "tarball": "https://registry.npmjs.org/netjsagent/-/netjsagent-0.3.23.tgz"
   },
   "gitHead": "eb7149639d9d2b9c768b3cc461c83264b6274d3f",
   "main": "netjsagent.js",
@@ -74,10 +75,8 @@
   "name": "netjsagent",
   "optionalDependencies": {},
   "private": false,
-  "readme": "ERROR: No README data found!",
   "scripts": {
-    "install": "node checkDependency.js",
     "start": "node ./dummy"
   },
-  "version": "0.3.26"
+  "version": "0.3.27"
 }
