@@ -1,7 +1,7 @@
 {
   "_args": [
     [
-      "netjsagent@0.3.27"
+      "netjsagent@0.3.28"
     ]
   ],
   "_from": "netjsagent@0.3.23",
@@ -54,7 +54,7 @@
     "path": "^0.12.7",
     "properties-reader": "~0.0.1",
     "url": "^0.11.0",
-    "v8-profiler": "5.6.5",
+    "v8-profiler": "5.7.0",
     "winston": "2.2.0"
   },
   "description": "Profiling tool for javascript",
@@ -78,5 +78,5 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "0.3.27"
+  "version": "0.3.28"
 }
