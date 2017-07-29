@@ -10,6 +10,7 @@ var cluster = require('cluster'),
     instrumentationFile,customInstrumenattionProfile;
 NJSInstrument.prototype.instrument = function instrument(args)
 {
+	
     try
     {
         if(args){
@@ -29,7 +30,6 @@ NJSInstrument.prototype.instrument = function instrument(args)
             agentSetting.settingFileMode = 'SHARED'                     //Changing file mode to shared, so need to write Tier Server Instance name send by ndc in ndsettings.conf file.
             util.initializeLogger(args.logLevel, args.BCILoggingMode);
         }
-
         agentSetting.initAllMap(args);
         agentSetting.readSettingFile();             //reading ndsetting file to connect with NS
 
@@ -58,21 +58,24 @@ NJSInstrument.prototype.instrument = function instrument(args)
             }catch(err){util.logger.warn("No instrumentation profile present ")}
             instPrfParseobj.parseInstrFile(customInstrumenattionProfile)
         }
-
-        njstrace.inject(null,instPrfParseobj.getInstrMap(),agentSetting.enableWraping);                    //injecting our code into applications code
-
-        agentSetting.generateFPMask();
-
-        require('./lib/nodetime/index').profile();
-
+	if(agentSetting.agentMode >= 3)	{
+		njstrace.inject(null,instPrfParseobj.getInstrMap(),agentSetting.enableWraping);                    //injecting our code into applications code
+	}
+	if(agentSetting.agentMode >= 2){
+		require('./lib/nodetime/index').profile();
+	}
+		
+	agentSetting.generateFPMask();
         process.nextTick(function(){
             try {
                 if(agentSetting.clusterMode) {
                     if (cluster.isMaster)
                         return;
                 }
-                clientConn.connectToServer();
+	    if(agentSetting.agentMode > 0){
+            	clientConn.connectToServer();
             }
+		}
             catch(e){
                 util.logger.warn(e);
             }
