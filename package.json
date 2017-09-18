@@ -39,8 +39,8 @@
   "_where": "/home/netstorm/work/workspace/nsecom-master",
   "dependencies": {
     "async-listener": "^0.6.0",
-    "cavisson-event-loop-stats": "^1.0.7",
-    "cavisson-gc-profiler": "^1.0.4",
+    "cavisson-event-loop-stats": "^1.0.8",
+    "cavisson-gc-profiler": "^1.0.5",
     "cluster": "0.7.7",
     "emitter-listener": "^1.0.1",
     "event-loop-monitor": "^0.2.0",
