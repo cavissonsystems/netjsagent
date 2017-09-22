@@ -14,13 +14,15 @@ NJSInstrument.prototype.instrument = function instrument(args)
     try
     {
         if(args){
-            if(!args.logLevel)
-                args.logLevel = 'debug';
+            if(!args.loglevel)
+                args.loglevel = 'info'
             if(!args.BCILoggingMode)
-                args.BCILoggingMode = 'FILE'
+                args.BCILoggingMode = 'OUTPUT_STREAM'
+            if(args.BCILoggingMode !== 'OUTPUT_STREAM' && args.BCILoggingMode !== 'BOTH' && args.BCILoggingMode !== 'FILE')
+                args.BCILoggingMode = 'OUTPUT_STREAM'
         }
         else{
-            args = {logLevel : 'debug',BCILoggingMode:'FILE'}
+            args = {loglevel : 'info' , BCILoggingMode : 'OUTPUT_STREAM'}
         }
 
         if(cluster.isMaster)
