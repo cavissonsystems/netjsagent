@@ -62,7 +62,7 @@ NJSInstrument.prototype.instrument = function instrument(args)
         }
 	if(agentSetting.agentMode >= 3)	{
 		njstrace.inject(null,instPrfParseobj.getInstrMap(),agentSetting.enableWraping);                    //injecting our code into applications code
-        require('./lib/utils/instrumentNodeEvents')(agentSetting.instrumentNodeEvents)
+        require('./lib/utils/instrumentNodeEvents')(agentSetting.corelateEventCallback)
 	}
 	if(agentSetting.agentMode >= 2){
 		require('./lib/nodetime/index').profile();
