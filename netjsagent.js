@@ -5,24 +5,28 @@ var njstrace = require('./lib/njstrace/njsTrace');
 var agentSetting = require("./lib/agent-setting");
 var clientConn = require("./lib/client");
 var path = require('path');
+var logStream = 'OUTPUT_STREAM'
 var util = require('./lib/util');
 var cluster = require('cluster'),
     instrumentationFile,customInstrumenattionProfile;
 NJSInstrument.prototype.instrument = function instrument(args)
 {
-	
     try
     {
+        var temp = process.env.CAV_LOGS ? process.env.CAV_LOGS :logStream;
+        if(temp == 'BOTH' || temp == 'FILE' )
+            logStream = temp;
+
         if(args){
             if(!args.loglevel)
                 args.loglevel = 'info'
             if(!args.BCILoggingMode)
-                args.BCILoggingMode = 'OUTPUT_STREAM'
-            if(args.BCILoggingMode !== 'OUTPUT_STREAM' && args.BCILoggingMode !== 'BOTH' && args.BCILoggingMode !== 'FILE')
-                args.BCILoggingMode = 'OUTPUT_STREAM'
+                args.BCILoggingMode = logStream
+            if(args.BCILoggingMode !== logStream && args.BCILoggingMode !== 'BOTH' && args.BCILoggingMode !== 'FILE')
+                args.BCILoggingMode = logStream
         }
         else{
-            args = {loglevel : 'info' , BCILoggingMode : 'OUTPUT_STREAM'}
+            args = {loglevel : 'info' , BCILoggingMode : logStream}
         }
 
         if(cluster.isMaster)
