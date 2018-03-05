@@ -54,7 +54,8 @@
     "path": "^0.12.7",
     "properties-reader": "~0.0.1",
     "url": "^0.11.0",
-    "winston": "2.2.0"
+    "winston": "2.2.0",
+    "ws": "^4.1.0"
   },
   "description": "Profiling tool for javascript",
   "devDependencies": {},
