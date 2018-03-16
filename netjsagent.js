@@ -3,13 +3,12 @@
  */
 var njstrace = require('./lib/njstrace/njsTrace');
 var agentSetting = require("./lib/agent-setting");
-var clientConn = require("./lib/client");
-var ws_client = require("./lib/ws_client");
 var path = require('path');
 var logStream = 'OUTPUT_STREAM'
 var util = require('./lib/util');
 var cluster = require('cluster'),
     instrumentationFile,customInstrumenattionProfile;
+var NDControlConnectionManager = require('./lib/NDConnectionManager')
 NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
@@ -79,13 +78,9 @@ NJSInstrument.prototype.instrument = function instrument(args)
                     if (cluster.isMaster)
                         return;
                 }
-	        if(agentSetting.agentMode > 0){
-                if(agentSetting.webSocketMode == 0)
-            	    clientConn.connectToServer();
-                else
-                    ws_client.connectToServer()
+	            if(agentSetting.agentMode > 0)
+                    NDControlConnectionManager.checkProtocolAndMakeConnection()
             }
-		}
             catch(e){
                 util.logger.warn(e);
             }
