@@ -54,6 +54,7 @@
     "path": "^0.12.7",
     "properties-reader": "~0.0.1",
     "url": "^0.11.0",
+    "websocket-stream": "^5.1.2",
     "winston": "2.2.0",
     "ws": "^4.1.0"
   },
