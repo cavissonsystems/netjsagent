@@ -1,6 +1,6 @@
 {
   "_args": [
-    "netjsagent@4.1.1024"
+    "netjsagent@4.1.1025"
   ],
   "_from": "netjsagent@0.3.23",
   "_id": "netjsagent@0.3.23",
@@ -77,5 +77,5 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "4.1.1024"
+  "version": "4.1.1025"
 }
