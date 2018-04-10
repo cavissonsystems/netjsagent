@@ -55,7 +55,7 @@ NJSInstrument.prototype.instrument = function instrument(args)
             instrumentationFile = require('./../../nodeInstr.json');            //Getting Instrumentation profile from server side
         }catch(err){util.logger.warn("No instrumentation profile present ")}
 
-        var instPrfParseobj = require('./lib/utils/instrumentationProfleParser');
+        var instPrfParseobj = require('./lib/njstrace/instrumentationProfleParser');
         if(instrumentationFile)
             instPrfParseobj.parseInstrFile(instrumentationFile)                 //parsing Instrumentation profile
         else{
