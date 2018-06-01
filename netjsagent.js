@@ -13,24 +13,25 @@ NJSInstrument.prototype.instrument = function instrument(args)
 {
     try
     {
-        var temp = process.env.CAV_LOGS ? process.env.CAV_LOGS :logStream;
+        var temp = process.env.CAV_LOGS ? process.env.CAV_LOGS : logStream;
         if(temp == 'BOTH' || temp == 'FILE' )
             logStream = temp;
 
         if(args){
-            if(!args.loglevel)
-                args.loglevel = 'info'
+            if(!args.logLevel)
+                args.logLevel = 'info'
             if(!args.BCILoggingMode)
                 args.BCILoggingMode = logStream
             if(args.BCILoggingMode !== logStream && args.BCILoggingMode !== 'BOTH' && args.BCILoggingMode !== 'FILE')
                 args.BCILoggingMode = logStream
         }
         else{
-            args = {loglevel : 'info' , BCILoggingMode : logStream}
+            args = {logLevel : 'info' , BCILoggingMode : logStream}
         }
 
-        if(cluster.isMaster)
-            util.initializeLogger(args.logLevel,args.BCILoggingMode)
+        if(cluster.isMaster) {
+            util.initializeLogger(args.logLevel, args.BCILoggingMode)
+        }
         else {
             agentSetting.clusterMode =true;
             agentSetting.settingFileMode = 'SHARED'                     //Changing file mode to shared, so need to write Tier Server Instance name send by ndc in ndsettings.conf file.
