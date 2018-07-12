@@ -75,10 +75,6 @@ NJSInstrument.prototype.instrument = function instrument(args)
 	agentSetting.generateFPMask();
         process.nextTick(function(){
             try {
-                if(agentSetting.clusterMode) {
-                    if (cluster.isMaster)
-                        return;
-                }
 	            if(agentSetting.agentMode > 0)
                     NDControlConnectionManager.checkProtocolAndMakeConnection()
             }
