@@ -1,6 +1,6 @@
 {
   "_args": [
-    "netjsagent@4.1.1212"
+    "netjsagent@4.1.1213"
   ],
   "_from": "netjsagent@0.3.23",
   "_id": "netjsagent@0.3.23",
@@ -37,8 +37,8 @@
   "_where": "/home/netstorm/work/workspace/nsecom-master",
   "dependencies": {
     "async-listener": "^0.6.0",
-    "cavisson-event-loop-stats": "1.0.10",
-    "cavisson-gc-profiler": "1.0.7",
+    "cavisson-event-loop-stats": "^1.0.10",
+    "cavisson-gc-profiler": "^1.0.7",
     "cavisson-profiling-tool": "^1.0.2",
     "cls-hooked": "^4.2.2",
     "cluster": "0.7.7",
@@ -79,5 +79,5 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "4.1.1212"
+  "version": "4.1.1213"
 }
