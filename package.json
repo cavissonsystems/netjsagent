@@ -1,6 +1,6 @@
 {
   "_args": [
-    "netjsagent@4.3.1076"
+    "netjsagent@4.3.1077"
   ],
   "_from": "netjsagent@0.3.23",
   "_id": "netjsagent@0.3.23",
@@ -50,7 +50,6 @@
     "idgen": "^2.0",
     "minimatch": "^0.3. 0",
     "mkdirp": "^0.5.1",
-    "node-gyp": "2.0.1",
     "path": "^0.12.7",
     "properties-reader": "~0.0.1",
     "url": "^0.11.0",
@@ -79,5 +78,5 @@
   "scripts": {
     "start": "node ./dummy"
   },
-  "version": "4.3.1076"
+  "version": "4.3.1077"
 }
